@@ -1,0 +1,60 @@
+
+html, body{
+    padding: 0;
+    margin: 0;
+} 
+
+html{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 226, 10, 0.562);
+}
+
+body{
+    background-color: paleturquoise;
+    min-width: min-content;
+    margin: 50px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-btns{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: azure;
+    border-radius: 15px 15px;
+    letter-spacing: 2px;
+    cursor: crosshair;
+    font-size: larger;
+    margin: 4px;
+}
+
+#nav, h1{
+    cursor: default;
+}
+
+#action-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#container{
+    height: min(600px);
+    width: min(600px);
+    border-radius: 5px 5px;
+    border: solid 2px paleturquoise;
+    background-color: white;
+    cursor: crosshair;
+}
+
+
+
+#input-form{
+    display:flex;
+    flex-direction: column;
+}

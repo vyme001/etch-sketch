@@ -20,8 +20,14 @@ Table: user-interface
 |       |       |                               |         |
 |       |       |                               |         |------------------------------------------------------------
 ```
+## 3. HTML Setup
+* Nav/User Selection with form
+    - radio button
+        - range(1, 100)
+    - Submit/button for number value
 
-## 3. Technical Specs & PsuedoCode
+
+## 4. Technical Specs & PsuedoCode
 
 ```text
 FUNCTION 
