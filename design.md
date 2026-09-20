@@ -30,6 +30,12 @@ Table: user-interface
 ## 4. Technical Specs & PsuedoCode
 
 ```text
-FUNCTION 
+FUNCTION exitGame/restartGame
+function exitGame(){
+    const exBtn = document.querySelector("#exit-btn");
+    exBtn.addEventListener("click", (e)=>{
+        console.log("event test: ", e)
+    })
+};
 
 ```
