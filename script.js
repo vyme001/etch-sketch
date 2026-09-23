@@ -15,6 +15,12 @@ const exitBtn = document.querySelector("#exit-btn");
         exitBtn.addEventListener("click",(e)=>{
             console.log('exit clicked', e);
         });
-})()
+})();
 
-
+//slider input logic in IIFE form
+(()=>{
+    const slider = document.querySelector("#slide-input");
+    slider.addEventListener("input", (e)=>{
+        console.log(e.target.value);
+    })
+})();
