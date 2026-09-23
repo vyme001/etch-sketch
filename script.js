@@ -24,3 +24,4 @@ const exitBtn = document.querySelector("#exit-btn");
         console.log(e.target.value);
     })
 })();
+
