@@ -4,7 +4,7 @@
 const actionForm = document.querySelector("#action-form");
     actionForm.addEventListener("submit",(e)=>{
     e.preventDefault()
-    })
+    });
 
 const playBtn = document.querySelector("#play-btn");
         playBtn.addEventListener("click",()=>{
@@ -16,11 +16,16 @@ const exitBtn = document.querySelector("#exit-btn");
             console.log('exit clicked', e);
         });
 })();
+//IIFE End
 
 //slider input logic in IIFE form
 (()=>{
+    const inputValue = document.querySelector("#value");
+
     const slider = document.querySelector("#slide-input");
     slider.addEventListener("input", (e)=>{
-        console.log(e.target.value);
-    })
+        inputValue.textContent = e.target.value;
+        console.log(inputValue);
+    });
 })();
+//IIFE End
