@@ -23,7 +23,14 @@ document.querySelector("#slide-input").addEventListener("input", (e)=>{
 (()=>{
 document.querySelector("#play-btn").addEventListener("click",()=>{
         const userValue = document.querySelector("#value").value;
-         console.log(userValue);
+
+        for(let x = 1; x <= userValue; x++){
+            const box = document.createElement("div");
+            box.className = "grid-box";
+            document.querySelector("#container").appendChild(box);
+
+        }
+        console.log(userValue);
         });
 
 })()
