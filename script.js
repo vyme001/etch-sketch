@@ -1,18 +1,11 @@
 
 //action form logic in IIFE; privateky scopes properties of the action form
 (()=>{
-const actionForm = document.querySelector("#action-form");
-    actionForm.addEventListener("submit",(e)=>{
+document.querySelector("#action-form").addEventListener("submit",(e)=>{
     e.preventDefault()
     });
 
-const playBtn = document.querySelector("#play-btn");
-        playBtn.addEventListener("click",()=>{
-            console.log('play clicked');
-        });
-
-const exitBtn = document.querySelector("#exit-btn");
-        exitBtn.addEventListener("click",(e)=>{
+document.querySelector("#exit-btn").addEventListener("click",(e)=>{
             console.log('exit clicked', e);
         });
 })();
@@ -20,12 +13,18 @@ const exitBtn = document.querySelector("#exit-btn");
 
 //slider input logic in IIFE form
 (()=>{
-    const inputValue = document.querySelector("#value");
-
-    const slider = document.querySelector("#slide-input");
-    slider.addEventListener("input", (e)=>{
-        inputValue.textContent = e.target.value;
-        console.log(inputValue);
+document.querySelector("#slide-input").addEventListener("input", (e)=>{
+        document.querySelector("#value").textContent = e.target.value;
     });
 })();
+//IIFE End
+
+//IIFE for the play Button click
+(()=>{
+document.querySelector("#play-btn").addEventListener("click",()=>{
+        const userValue = document.querySelector("#value").value;
+         console.log(userValue);
+        });
+
+})()
 //IIFE End
