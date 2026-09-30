@@ -24,7 +24,7 @@ document.querySelector("#slide-input").addEventListener("input", (e)=>{
   document.querySelector("#play-btn").addEventListener("click", (e)=>{
     const gridContainer = document.querySelector("#container");
     const value = document.querySelector("#slide-input").value;
-    //The Eloquent JS chess board exercise helped me figure this out!!!
+    //The Eloquent JS chessboard exercise helped me figure this out!!!
    for(let x = 0; x < value; x++){
     const newColumn = document.createElement("div");
       for(let y = 0; y < value; y++){
