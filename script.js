@@ -21,17 +21,25 @@ document.querySelector("#slide-input").addEventListener("input", (e)=>{
 
 //IIFE for the play Button click
 (()=>{
-document.querySelector("#play-btn").addEventListener("click",()=>{
-        const userValue = document.querySelector("#value").value;
-
-        for(let x = 1; x <= userValue; x++){
-            const box = document.createElement("div");
-            box.className = "grid-box";
-            document.querySelector("#container").appendChild(box);
-
-        }
-        console.log(userValue);
-        });
-
+  document.querySelector("#play-btn").addEventListener("click", (e)=>{
+    const gridContainer = document.querySelector("#container");
+    const value = document.querySelector("#slide-input").value;
+    //The Eloquent JS chess board exercise helped me figure this out!!!
+   for(let x = 0; x < value; x++){
+    const newColumn = document.createElement("div");
+      for(let y = 0; y < value; y++){
+        let newBox = document.createElement("div");
+        newBox.className = "grid-box";
+        newColumn.appendChild(newBox)
+      }
+      gridContainer.appendChild(newColumn)
+   }
+  })
 })()
+//IIFE End
+
+
+
+//IIFE Start
+
 //IIFE End
