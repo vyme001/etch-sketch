@@ -5,7 +5,6 @@
   });
 
   document.querySelector("#exit-btn").addEventListener("click",(e)=>{
-    console.log('exit clicked', e);
     window.location.reload();
   });
 })();
