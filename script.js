@@ -1,4 +1,3 @@
-
 //action form logic in IIFE; privateky scopes properties of the action form
 (()=>{
   document.querySelector("#action-form").addEventListener("submit",(e)=>{
@@ -7,6 +6,7 @@
 
   document.querySelector("#exit-btn").addEventListener("click",(e)=>{
     console.log('exit clicked', e);
+    window.location.reload();
   });
 })();
 //IIFE End
@@ -21,27 +21,35 @@
 
 //IIFE for the play Button click
 (()=>{
+  let toggle = false;
   document.querySelector("#play-btn").addEventListener("click", (e)=>{
+  
+    if(toggle){
+      alert("Already selected!")
+      return;
+    }else{
+    toggle = true;
     const gridContainer = document.querySelector("#container");
     const value = document.querySelector("#slide-input").value;
 
     //The Eloquent JS chessboard exercise helped me figure this out!!!
   for(let x = 0; x < value; x++){
     const newColumn = document.createElement("div");
-    newColumn.className = "row-house";
+    newColumn.className = "row-box";
       for(let y = 0; y < value; y++){
         let newBox = document.createElement("div");
         newBox.className = "grid-box";
-        newColumn.appendChild(newBox)
-      }
-    gridContainer.appendChild(newColumn)
-  }
+        newColumn.appendChild(newBox);
+      };
+    gridContainer.appendChild(newColumn);
+  };
+};
   })
-})()
+})();
 //IIFE End
 
 
 
-//IIFE Start
+//IIFE for the hover effect of the grid panel
 
 //IIFE End
