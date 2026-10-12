@@ -53,7 +53,7 @@ nav{
     display: flex;
 }
 
-.row-box{
+.row-container{
     /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
@@ -62,10 +62,12 @@ nav{
 }
 
 .grid-box{
-    border: 0.5px solid rgba(166, 239, 248, 0.808);
+    border: 1px solid rgba(202, 166, 248, 0.808);
     justify-self: stretch;
     align-self: stretch;
     flex: 1;
+    background-color:rgb(135 202 255 / 0.8);
+    transition: all 0.2s;
 }
 
 #input-form{

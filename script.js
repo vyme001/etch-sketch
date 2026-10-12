@@ -1,3 +1,5 @@
+"use strict";
+
 //action form logic in IIFE; privateky scopes properties of the action form
 (()=>{
   document.querySelector("#action-form").addEventListener("submit",(e)=>{
@@ -21,35 +23,52 @@
 
 //IIFE for the play Button click
 (()=>{
-  let toggle = false;
+  let gridCreated = false;
   document.querySelector("#play-btn").addEventListener("click", (e)=>{
   
-    if(toggle){
+    if(gridCreated){
       alert("Already selected!")
       return;
     }else{
-    toggle = true;
+    gridCreated = true;
     const gridContainer = document.querySelector("#container");
     const value = document.querySelector("#slide-input").value;
 
     //The Eloquent JS chessboard exercise helped me figure this out!!!
   for(let x = 0; x < value; x++){
-    const newColumn = document.createElement("div");
-    newColumn.className = "row-box";
+    const newRow = document.createElement("div");
+    newRow.className = "row-container";
       for(let y = 0; y < value; y++){
         let newBox = document.createElement("div");
         newBox.className = "grid-box";
-        newColumn.appendChild(newBox);
+        newBox.addEventListener("mouseover", (e)=>{hoverEffect(e.target)})
+        newRow.appendChild(newBox);
       };
-    gridContainer.appendChild(newColumn);
+    gridContainer.appendChild(newRow);
+
   };
 };
   })
 })();
 //IIFE End
 
+//Function declaration for the hover effect of the grid panel being added to every newEleemnt dynamically created
+function hoverEffect(element){
 
+  function opacity(){
+    return `${Number.parseFloat(Math.random() * 1).toFixed(2)}`;
+  };
 
-//IIFE for the hover effect of the grid panel
+  function randonNum(){
+    let num = `${Math.floor(Math.random() * 255)}`;
+    return num;
+  };
 
+  function RGBTriplet(){
+    let moc = `${randonNum()} ${randonNum()} ${randonNum()}`;
+    return moc;
+  };
+
+  element.style.backgroundColor = `rgb( ${RGBTriplet()} / ${opacity()})`;
+};
 //IIFE End

@@ -39,3 +39,8 @@ function exitGame(){
 };
 
 ```
+
+## 5. Event Delegation - attaching handlers to dynamically created elements
+
+
+## 6. Hover Effect Function
